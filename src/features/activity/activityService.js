@@ -8,7 +8,7 @@ const findUser = async (token) => {
             Authorization: `Bearer ${token}`,
         }
     }
-    const response = await axios.get(API_URL + 'findUser', config)
+    const response = await axios.get(API_URL + 'finduser', config)
     if (response.data && response.data.success) {
         return response.data.data;
     }
@@ -26,7 +26,7 @@ const userActivity = async (postDataForm,token) => {
         }
     }
 
-    const response = await axios('userActivity',config);
+    const response = await axios('activityuser',config);
     if (response.data && response.data.success) {
         return response.data.data;
     }
